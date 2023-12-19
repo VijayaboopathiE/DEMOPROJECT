@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <style>
+         .rgb-border {
+  border: 15px solid;
+  padding: 5px;
+  animation: borderChange 5s infinite alternate;
+}
+.center {
+  margin: auto;
+  width: 90%;
+  border: 10px solid black;
+}
+.rgb-text {
+          /*  font-size: 25px;*/
+            animation: colorChange 5s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+            33% {
+                color: green;
+            }
+            66% {
+                color: blue;
+            }
+            100% {
+                color: red;
+            }
+        }
+@keyframes borderChange {
+  0% {
+    border-color: rgb(255, 0, 0); 
+  }
+  5%{
+    border-color: maroon;
+  }
+  15%{
+    border-color: chocolate;
+  }
+  25%{
+    border-color: coral;
+  }
+  35% {
+    border-color: rgb(0, 255, 0); 
+  }
+  45%{
+    border-color: darkgreen;
+  }
+  55%{
+    border-color:greenyellow;
+  }
+  65%{
+    border-color:lightblue;
+  }
+  75%{
+    border-color: skyblue;
+  }
+  85% {
+    border-color: rgb(0, 0, 255); 
+  }
+  95%{
+border-color: darkblue;
+  }
+  100% {
+    border-color:pink; 
+  }
+}
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        video {
+            width: 90%;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color:azure;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+           /* background-color:white;*/
+            color:white;
+            text-align: center;
+            padding: 10px;
+        }
+        .box {
+      width: 300px;
+      border: 5px solid whitesmoke;
+      padding: 20px; 
+      margin: 20px auto; 
+      color: azure;
+    }
+    </style>
+</head>
+<body class="rgb-border" style="background-color: black;">
+ <br>
+  <div class="center">
+  <video id="videoPlayer" width="80%" height="90%" controls >
+    <source src="Seoul - 21985.mp4" type="video/mp4">
+    <source src="aurora_borealis_-_74183 (Original).mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+</div>
+<script type="text/javascript" defer>
+  var videoPlayer = document.getElementById('videoPlayer');
+
+  if (videoPlayer) {
+      var playlist = ["Seoul - 21985.mp4", "aurora_borealis_-_74183 (Original).mp4"];
+      var currentVideoIndex = 0;
+
+      videoPlayer.onended = function() {
+          currentVideoIndex = (currentVideoIndex + 1) % playlist.length;
+          videoPlayer.src = playlist[currentVideoIndex];
+          videoPlayer.play();
+      };
+  } else {
+      console.error("Video player not found.");
+  }
+</script> 
+   <br>
+
+    <div align="left">        
+ 
+</div>
+  <a href="login.html" >
+      <h3 class="center rgb-text">Signout</h3>
+    </a>
+    <div class="footer">
+        <h5>Contact <a href="https://github.com/VijayaboopathiE/" target="_blank" class="rgb-text">Vijayaboopathi</a></h5>
+    </div>
+</body>
+</html>

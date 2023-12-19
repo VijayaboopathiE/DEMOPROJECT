@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    .col {
+    color: grey;
+}
+        .rgb-text {
+          /*  font-size: 25px;*/
+            animation: colorChange 5s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+            33% {
+                color: green;
+            }
+            66% {
+                color: blue;
+            }
+            100% {
+                color: red;
+            }
+        }
+
+
+    h1 {
+      text-align: center;
+     /* color: burlywood; */
+      padding: 10px;
+    }
+
+    .box {
+      width: 300px;
+      border: 5px solid whitesmoke;
+      padding: 20px; 
+      margin: 20px auto; 
+      color: azure;
+    }
+
+    /*label {
+      color:azure;
+    }*/
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: azure;
+      color: black; 
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: lightcyan;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto; 
+        }
+
+  </style>
+</head>
+<body>
+  <br>
+  <div  >
+    <br>
+    <h1 class="rgb-text"style= "font-size: 50px;">Login page</h1>
+    <div class="box">
+      <br>
+      <label for="email" class="rgb-text" style="font-size: 15px;" >Email:</label>
+      <input type="email" id="email" name="email">
+      <label for="pwd" class="rgb-text" style="font-size: 15px;" >Password:</label>
+      <input type="password" id="pwd" name="pwd">
+      <div class="center">
+      <button type="button" onclick="validatePasswords()" class="rgb-text" style="font-size: 15px; background-color:black;" >Submit</button>
+    </div>
+  </div>
+
+    <div class="center box" >
+      <a href="register.html" class="rgb-text" style="font-size: 20px;" >SignUp</a>
+    </div>
+<pre >                                                          </pre>
+    <div class="footer center ">
+      <h3 class="rgb-text">Contact <a href="https://github.com/VijayaboopathiE/" target="_blank" class="rgb-text">Vijayaboopathi</a></h3>
+    </div>
+  </div>
+
+  <script>
+    function validatePasswords() {
+      var pwd = document.getElementById('pwd').value;
+      var mail = document.getElementById('email').value;
+
+      if (pwd === "123" && mail === "abc@gmail.com") {
+        alert("Login Successful!");
+        location.href = "main.html";
+      } else {
+        alert("Wrong Password or Wrong Email");
+        location.href = "login.html";
+      }
+    }
+  </script>
+</body>
+</html>

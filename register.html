@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DEMO</title>
+<style >
+ .rgb-border {
+  border: 15px solid;
+  padding: 5px;
+  animation: borderChange 5s infinite alternate;
+}
+
+@keyframes borderChange {
+  0% {
+    border-color: rgb(245, 238, 238); 
+  }
+  33% {
+    border-color: rgb(220, 241, 220); 
+  }
+  66% {
+    border-color: rgb(227, 227, 243); 
+  }
+  100% {
+    border-color: rgb(232, 217, 217); 
+  }
+}
+.rgb-text {
+          /*  font-size: 25px;*/
+            animation: colorChange 5s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+            33% {
+                color: green;
+            }
+            66% {
+                color: blue;
+            }
+            100% {
+                color: red;
+            }
+        }
+   
+        .box {
+      width: 300px;
+      border: 5px solid whitesmoke;
+      padding: 20px; 
+      margin: 20px auto; 
+      color: azure;
+    }
+    .center {
+  margin: auto;
+  width: 20%;
+  border: 5px solid black;
+  padding: 10px;
+}
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  background-color: rgb(250, 250, 250);
+  color: black;
+  text-align: center;
+}
+
+    </style>
+</head>
+<body  style="background-color: black;">
+<div>
+<div>
+<h3 style="color:White"><marquee >Welcome to Demo Page </marquee></h3>
+<h1 align ="center" style="color: darkseagreen;">Demo Registration</h1><pre>  </pre>  
+<h1 align="center" style= "color:pink">Registeration Page</h1>
+<pre>  </pre>
+<div class="box center rgb-border">
+<label for="fname"><h3 class="rgb-text" >First name:</h3></label>
+<input type="text" id="fname" name="fname">
+<pre>  </pre>
+
+<label for="lname"><h3 class="rgb-text">Last name:</h3></label>
+<input type="text" id="lname" name="lname">
+<pre>  </pre>
+
+<label for="email"><h3 class="rgb-text">Enter your email:</h3></label>
+<input type="email" id="email" name="email">
+<pre>  </pre>
+
+<label for="pwd"><h3 class="rgb-text">Enter Password:</h3></label>
+<input type="password" id="pwd" name="pwd">
+<pre>  </pre>
+
+<label for="pwd1"><h3 class="rgb-text">Re-Enter Password:</h3></label>
+<input type="password" id="pwd1" name="pwd1">
+<pre>  </pre>
+
+<script>
+function validatePasswords() {
+    var pwd = document.getElementById('pwd').value;
+    var pwd1 = document.getElementById('pwd1').value;
+
+    if(pwd != pwd1){
+        alert("Password doesn't Match!!");
+
+    } else {
+        alert("Successfully Registered!");
+location.href="login.html"
+
+    }
+}
+</script>
+<div class="center">
+<button type="button" onclick="validatePasswords()" class="rgb-text" style="background-color: black;font-size: 20px;">Submit</button></div><pre>  </pre></div>
+<br>
+<div class="box center rgb-border">
+<h3 align="center" class="rgb-text" >Already have an Account ?</h3>
+<a href="login.html"><h3 align="center" style="color:purple;">Login</h3></a>
+</div>
+<footer>
+   
+<h5 align="center" style="color: white;">Contact <a href="https://github.com/VijayaboopathiE/" target="_blank">Vijayaboopathi</a>
+</h5> 
+</footer>
+</div>
+</body>
+</html>
